@@ -1,0 +1,14 @@
+body,ul{
+  margin:0;
+  padding:0;
+}
+header, section, footer, aside, nav, main, article, figure {
+  display: block; 
+}
+ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #a1a1a1;
+}
