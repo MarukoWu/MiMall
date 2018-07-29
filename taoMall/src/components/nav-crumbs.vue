@@ -3,7 +3,7 @@
     <div class="crumbs">
       <a href="">主页</a>
       <span>/</span>
-      <a href="">购物车</a>
+      <router-link to="/cart">购物车</router-link>
     </div>
   </section>
 </template>
@@ -25,6 +25,6 @@ export default {
   color: #a1a1a1;
 }
 .crumbs a:hover{
-  color:red;
+  color:#d1434a;
 }
 </style>

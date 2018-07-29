@@ -9,7 +9,8 @@
         <li>总价</li>
         <li>编辑</li>
       </ul>
-      <ul class="list-item list-rows">
+      <div class="list-item-wrap">
+        <ul class="list-item list-rows">
         <li class="product-detail">
           <div class="check">
             <img src="../../assets/image/finish.png" alt="">
@@ -26,8 +27,47 @@
           </div>
         </li>
         <li>￥99.00</li>
-        <li><i class="iconfont">&#xe600;</i></li>
-      </ul>
+        <li><i class="iconfont icon-clear">&#xe613;</i></li>
+        </ul>
+        <ul class="list-item list-rows">
+          <li class="product-detail">
+            <div class="check">
+              <img src="../../assets/image/finish.png" alt="">
+            </div>
+            <div class="img-box">
+              <img class="product-img" src="../../assets/image/product/1.jpg" alt="">
+            </div>
+            <p>自动折叠伞</p>
+          </li>
+          <li>￥99.00</li>
+          <li>
+            <div class="num-box">
+              <span class="subtract">-</span><span class="count">1</span><span class="add">+</span>
+            </div>
+          </li>
+          <li>￥99.00</li>
+          <li><i class="iconfont">&#xe600;</i></li>
+        </ul>
+        <ul class="list-item list-rows">
+          <li class="product-detail">
+            <div class="check">
+              <img src="../../assets/image/finish.png" alt="">
+            </div>
+            <div class="img-box">
+              <img class="product-img" src="../../assets/image/product/1.jpg" alt="">
+            </div>
+            <p>自动折叠伞</p>
+          </li>
+          <li>￥99.00</li>
+          <li>
+            <div class="num-box">
+              <span class="subtract">-</span><span class="count">1</span><span class="add">+</span>
+            </div>
+          </li>
+          <li>￥99.00</li>
+          <li><i class="iconfont">&#xe600;</i></li>
+        </ul>
+      </div>
       <ul class="list-result list-rows">
         <li class="all">
           <div class="checkAll">
@@ -36,11 +76,9 @@
             </div>
             <span class="all-text">全部</span>
           </div>
-          <div>
-            <span>
-              合计:
-            </span>
-            <span class="total">全部</span>
+          <div class="total">
+            <span>合计 :</span>
+            <span class="count">￥99</span>
           </div>
         </li>
         <li class="settlement">去结算</li>
@@ -51,13 +89,19 @@
 
 <script>
 export default {
-  name: 'CartList'
+  name: 'CartList',
+  methods: {
+
+  }
 }
 </script>
 
 <style scoped>
 @import '../../assets/css/font.css';
-
+.icon-clear{
+  font-size: 24px;
+  cursor: pointer;
+}
 .cartlist-container{
   padding:15px 40px 15px 60px;
   color:#333;
@@ -70,12 +114,15 @@ export default {
   display: flex;
   line-height: 60px;
   align-items: center;
-  border:1px solid #605f61;
 }
+.cart-list .list-item-wrap{
+  border:1px solid #dbd9db;
+}
+
 .list-title.list-rows{
   display: flex;
 }
-.list-title li{
+.list-rows li{
   width: 210px;
 }
 .list-title li:nth-child(1){
@@ -84,9 +131,6 @@ export default {
 .list-title.list-rows{
   color:#fff;
   background: #605f61;
-}
-.list-item li{
-  width: 210px;
 }
 .list-rows .product-detail{
   width: 360px;
@@ -148,6 +192,7 @@ export default {
   justify-content: space-between;
   height: 40px;
   line-height: 40px;
+  border:1px solid #dbd9db;
 }
 .list-result .all{
   display: flex;
@@ -159,10 +204,21 @@ export default {
   align-items: center;
   padding-left: 20px;
 }
-.list-result .all-text{
+.list-result .all .total{
+  margin-right: 20px;
+}
+.list-result .all .total .count{
+  padding:0 10px;
+  color: #d1434a;
+  font-weight: bold;
+}
+.list-result .all .all-text{
   padding-left: 20px;
 }
 .list-result .settlement{
   width:100px;
+  color: #fff;
+  border-left: 1px solid #d1434a;
+  background: #d1434a;
 }
 </style>
